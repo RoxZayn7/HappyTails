@@ -1,0 +1,21 @@
+/* --- Colors --- */
+:root {
+    --bg: #FFF7EC;                            /* page bg */
+    --surface: #FFFFFF;                       /* cards */
+    --ink: #22312C;                           /* main text */
+    --ink-soft: #5A6B62;                      /* lighter text */
+    --line: #F0DFC8;                          /* borders */
+    --teal: #0E7C6B;
+    --teal-dark: #0A5F52;
+    --teal-soft: #DDF2EC;
+    --amber: #E8890C;
+    --coral: #E4572E;
+    --pink: #D94F70;
+    --shadow: 0 10px rgba(90, 55, 10, .10);
+    --radius: 20px;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(180deg, var(--bg) 0%, #FFF1DC 100%);
+}
