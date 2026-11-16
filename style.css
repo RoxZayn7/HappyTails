@@ -55,3 +55,24 @@ a {
     pointer-events: none;
     overflow: hidden;
 }
+
+.paw-float {
+    position: absolute;
+    bottom: -70px;
+    opacity: 0;
+    color: var(--teal);
+    animation: pawRise linear infinite;
+    will-change: transform, opacity;
+}
+
+.paw-float svg {
+    display: block;
+}
+
+@keyframes pawRise {
+    0% { transform: translateY(0) translateX(0) rotate(var(--rot, 0deg)); opacity: 0; }
+    10% { opacity: var(--o, .14); }
+    50% { transform: translateY(-55vh) translateX(var--(--sway, 24px)) rotate(calc(var(--rot, 0deg) + 14deg)); }
+    90% { opacity: var(--o, .14); }
+    100% { transform: translateY(-112vh) translateX(calc(var(--sway, 24px) * -1)) rotate(var(--rot, 0deg)); opacity: 0; }
+}
