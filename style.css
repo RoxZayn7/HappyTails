@@ -210,3 +210,33 @@ a {
     outline: none;
 }
 
+.seach-box input:focus {
+    border-color: var(--teal);
+}
+
+.clear-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    border: 0;
+    background: var(--teal-soft);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: var(--ink-soft);
+    display: none;
+    place-items: center;
+}
+
+.clear-btn.show {
+    display: grid;
+}
+
+.search-status {
+    margin: 12px 0 0;
+    font-size: .88rem;
+    color: var(--ink-soft);
+    font-weight: 700;
+}
