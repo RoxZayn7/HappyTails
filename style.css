@@ -76,3 +76,18 @@ a {
     90% { opacity: var(--o, .14); }
     100% { transform: translateY(-112vh) translateX(calc(var(--sway, 24px) * -1)) rotate(var(--rot, 0deg)); opacity: 0; }
 }
+
+/* Little paw that pops up when clicked on screen */
+.paw-pop {
+    position: fixed;
+    z-index: 60;
+    pointer-events: none;
+    color: var(--amber);
+    animation: pawPop ,9s ease-out forwards;
+}
+
+@keyframes pawPop {
+    0% { transform: scale(.4) rotate(-14deg); opacity: 0; }
+    25% { opacity: .9; }
+    100% { display: none; }
+}
