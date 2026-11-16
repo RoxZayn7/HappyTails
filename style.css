@@ -266,3 +266,51 @@ a {
 .cat-chip.active { background: var(--teal); border-color: var(--teal); color: #fff; }
 .cat-chip .cnt { font-size: .74rem; background: #FFF3E2; color: var(--ink-soft); border-radius: 99px; padding: 2px 8px; }
 .cat-chip.active .cnt { background: rgba(255, 255, 255, .25); color: #fff; }
+
+/* --- Pet filter row --- */
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 16px 0 6px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 12px 14px;
+}
+
+.f-label {
+    font-size: .8rem;
+    font-weight: 800;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+}
+
+.f-group {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.f-btn {
+    border: 2px solid var(--line);
+    background: var(--bg);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 6px 13px;
+    font-weight: 800;
+    font-size: .85rem;
+}
+
+.f-btn:hover { border-color: var(--amber); }
+.f-btn:active { background: var(--amber); border: var(--amber); color: #fff; }
+
+.reset-btn {
+    margin-left: auto;
+    border: 0;
+    background: none;
+    color: var(--coral);
+    font-weight: 800;
+    font-size: .88rem;
+}
