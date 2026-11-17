@@ -352,7 +352,7 @@ a {
     transform: translateY(-4px);
 }
 
-/* Real photo at the top of each card */
+/* --- Real photo at the top of each card --- */
 .photo-box {
     height: 180px;
     background: var(--c, #DDF2EC);
@@ -415,7 +415,7 @@ a {
     color: var(--ink-soft);
 }
 
-/* "Closed today" note on a card */
+/* --- "Closed today" note on a card --- */
 .closed {
     background: #FDE3D9;
     color: #B3371A;
@@ -476,7 +476,7 @@ a {
     background: var(--teal-dark);
 }
 
-/* Empty state (when nothing matches) */
+/* --- Empty state (when nothing matches) --- */
 .empty {
     display: none;
     text-align: center;
@@ -493,3 +493,19 @@ a {
 .empty p { color: var(--ink-soft); margin: 0 auto 16px; }
 .empty button { background: var(--coral); color: #fff; border: 0; border-radius: 12px; padding: 11px 20px; font-weight: 800; }
 
+/* --- Footer --- */
+footer {
+    margin: 52px 0 0;
+    border-top: 1px solid var(--line);
+    padding: 26px 0 40px;
+    color: var(--ink-soft);
+    font-size: .9rem;
+    text-align: center;
+}
+
+footer b {
+    color: var(--ink);
+    font-family: "Baloo 2";
+}
+
+/* --- Details popup --- */
