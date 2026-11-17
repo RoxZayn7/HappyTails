@@ -535,3 +535,69 @@ footer b {
 .modal .m-body { padding: 20px 22px 24px; }
 .modal .m-body h3 { font-size: 1.55rem; margin: 4px 0 6px; }
 .modal .m-body .desc { color: var(--ink-soft); }
+
+/* --- Photo at the top of the popup --- */
+.m-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+    margin-bottom: 10px;
+}
+
+/* --- "What's included" list inside the popup --- */
+.m-sub {
+    font-family: "Baloo 2";
+    font-size: 1.05rem;
+    margin: 16px 0 4px;
+}
+
+.m-list {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--ink-soft);
+    font-size: .94rem;
+}
+
+.m-list li {
+    margin: 4px 0;
+}
+
+.m-close {
+    float: right;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 0;
+    background: #FFF3E2;
+    font-size: 1.05rem;
+    color: var(--ink);
+}
+
+.m-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.m-actions a {
+    flex: 1 1 150px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 13px 14px;
+    border-radius: 14px;
+}
+
+.m-actions .call {
+    background: var(--teal);
+    color: #fff;
+}
+
+.m-actions .mail {
+    background: #FFF3E2;
+    color: var(--ink);
+    border: 2px solid var(--line);
+}
