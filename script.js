@@ -40,3 +40,21 @@ function refresh() {
         ? 'Results for "' + state.q + '"'
         : "Showing all services";
 }
+
+var searchInput = document.getElementById("searchInput");
+var clearBtn = document.getElementById("clearBtn");
+
+searchInput.addEventListener("input", function() {
+    clearBtn.classList.toggle("show", searchInput.ariaValueMax.length > 0);
+    state.q = searchInput.value;
+    refresh(); 
+});
+
+clearBtn.addEventListener("click", function() {
+    searchInput.value = "";
+    state.q = "";
+    clearBtn.classList.remove("show");
+    refresh();
+    searchInput.focus();
+});
+
