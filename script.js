@@ -26,3 +26,17 @@ function matches(card) {
     }
     return true;
 }
+
+function refresh() {
+    var shown = 0;
+    for (var i = 0; i < cards.length; i++) {
+        var show = matches(cards[i]);
+        cards[i].style.display = show ? "" : "none";
+        if (show) shown++;
+    }
+    resultCount.textContent = shown + (shown === 1 ? " service" : " service");
+    emptyState.classList.toggle("show", shown === 0);
+    searchStatus.textContent = state.q
+        ? 'Results for "' + state.q + '"'
+        : "Showing all services";
+}
