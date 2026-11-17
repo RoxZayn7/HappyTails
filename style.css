@@ -415,3 +415,64 @@ a {
     color: var(--ink-soft);
 }
 
+/* "Closed today" note on a card */
+.closed {
+    background: #FDE3D9;
+    color: #B3371A;
+    font-size: .76rem;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 999px;
+}
+
+.tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #FFF3E2;
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    font-size: .76rem;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 999px;
+}
+
+.card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-top: 1px dashed var(--line);
+    padding-top: 13px;
+}
+
+.price b {
+    font-family: "Baloo 2";
+    font-size: 1.3rem;
+    color: var(--teal-dark);
+}
+
+.price span {
+    color: var(--ink-soft);
+    font-size: .82rem;
+    font-weight: 700;
+}
+
+.details-btn {
+    background: var(--teal);
+    color: #fff;
+    border: 0;
+    border-radius: 12px;
+    padding: 11px 18px;
+    font-weight: 800;
+    font-size: .92rem;
+}
+
+.details-btn:hover {
+    background: var(--teal-dark);
+}
+
