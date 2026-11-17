@@ -104,3 +104,42 @@ function resetAll() {
 
 document.getElementById("resetAll").addEventListener("click", resetAll);
 document.getElementById("emptyReset").addEventListener("click", resetAll);
+
+var modalBack = document.getElementById("modalBack");
+var modalBody = document.getElementById("modalBody");
+
+function openModal(card) {
+    var img = card.querySelector(".photo-box img");
+    var name = card.querySelector("h3").textContent;
+    var rating = card.querySelector(".rating-row").innerHTML;
+    var desc = card.querySelector("..desc").textContent;
+    var meta = card.querySelector(".meta-row").innerHTML;
+    var price = card.querySelector(".price").innerHTML;
+    var includes = (card.getAttribute("data-includes") || "").split("|");
+    var list = "";
+    for (var i = 0; i < includes.length; i++) {
+        if (includes[i]) list += "<li>" + includes[i] + "</li>;"
+    }
+modalBody.innerHTML = 
+    '<img class="m-photo" src="' + img.getAttribute("src") + '"alt="' + img.alt + '">' +
+    '<h3>' + name + '</h3>' +
+    '<div class="rating-row">' + rating + '</div>' +
+    '<p class="desc">' +meta + '</div>' +
+    '<div class="meta-row">' + meta + '</div>' +
+    '<h4 class="m-sub">What\'s included</h4>' +
+    '<ul class="m-list">' + list + '</ul>' +
+    '<div class="card=foot">' +
+        '<div class="price">' + price + '</div>' +
+    '</div>' +
+    '<div class="m-actions">' +
+        '<a class="call" href="tel:' + card.getAttribute("data-phone") + '">  📞  Call </a>' +
+        '<a class="mail" href="mailto:' + card.getAttribute("data-email") + '"> 📧 Email </a>' +
+    '</div>';
+    modalBack.classList.add("open");
+    document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+    modalBack.classList.remove("open");
+    document.body.style.overflow = "";
+}
