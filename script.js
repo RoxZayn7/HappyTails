@@ -143,3 +143,12 @@ function closeModal() {
     modalBack.classList.remove("open");
     document.body.style.overflow = "";
 }
+
+grid.addEventListener("click", function(e) {
+    var btn = e.target.closest(".details-btn");
+    if (btn) openModal(btn.closest(".card"));
+});
+
+document.getElementById("mClose").addEventListener("click", closeModal);
+modalBack.addEventListener("click", function(e) { if (e.target === modalBack) closeModal(); });
+document.addEventListener("keydown", function(e) { if (e.key === "Escape") closeModal(); });
