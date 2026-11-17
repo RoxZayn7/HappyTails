@@ -476,3 +476,20 @@ a {
     background: var(--teal-dark);
 }
 
+/* Empty state (when nothing matches) */
+.empty {
+    display: none;
+    text-align: center;
+    background: var(--surface);
+    border: 2px dashed var(--line);
+    border-radius: 24px;
+    padding: 44px 20px;
+    margin: 10px 0 30px;
+}
+
+.empty.show { display: block; }
+.empty .big-paw { font-size: 2.5rem; }
+.empty h3 { font-size: 1.4rem; margin: 12px 0 6px; }
+.empty p { color: var(--ink-soft); margin: 0 auto 16px; }
+.empty button { background: var(--coral); color: #fff; border: 0; border-radius: 12px; padding: 11px 20px; font-weight: 800; }
+
