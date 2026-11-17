@@ -80,3 +80,27 @@ catChips.addEventListener("click", function(e) {
     buildChips();
     refresh();
 });
+
+document.getElementById("petFilters").addEventListener("click", function(e) {
+    var btn = e.target.closest("[data-pet]");
+    if (!btn) return;
+    var all = document.querySelectorAll("#petFilters .f-btn");
+    for (var i = 0; i < all.length; i++) all[i].classList.remove("active");
+    btn.classList.add("active");
+    state.pet = btn.getAttribute("data-pet");
+    refresh();
+});
+
+function resetAll() {
+    state = { q: "", cat: "all", pet: "all" };
+    searchInput.value = "";
+    clearBtn.classList.remove("show");
+    var all = document.querySelectorAll("#petFilters .f-btn");
+    for (var i = 0; i < all.length; i++) all[i].classList.remove("active");
+    document.querySelector('#petFilters [data-pet="all"]').classList.add("active");
+    buildChips();
+    refresh();
+}
+
+document.getElementById("resetAll").addEventListener("click", resetAll);
+document.getElementById("emptyReset").addEventListener("click", resetAll);
