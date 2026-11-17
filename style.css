@@ -601,3 +601,10 @@ footer b {
     color: var(--ink);
     border: 2px solid var(--line);
 }
+
+/* --- Small screens --- */
+@media (max-width: 640px) {
+    .grid { grid-template-columns: 1fr; }
+    .hero { padding-top: 24px; }
+    .reset-btn { margin-left: 0; }
+}
