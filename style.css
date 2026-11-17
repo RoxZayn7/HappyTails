@@ -509,3 +509,29 @@ footer b {
 }
 
 /* --- Details popup --- */
+.modal-back {
+    position: fixed;
+    inset: 0;
+    background: rgba(18, 28, 24, .55);
+    z-index: 80;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-back.open {
+    display: flex;
+}
+
+.modal {
+    background: var(--surface);
+    width: 100%;
+    max-width: 520px;
+    border-radius: 26px;
+    overflow: hidden;
+}
+
+.modal .m-body { padding: 20px 22px 24px; }
+.modal .m-body h3 { font-size: 1.55rem; margin: 4px 0 6px; }
+.modal .m-body .desc { color: var(--ink-soft); }
