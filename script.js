@@ -58,3 +58,25 @@ clearBtn.addEventListener("click", function() {
     searchInput.focus();
 });
 
+var catChips = document.getElementById("catChips");
+
+function buildChips() {
+    var html = "";
+    for (var i = 0; i < CATEGORIES.length; i++) {
+        var c = CATEGORIES[i];
+        var count = 0;
+        for (var j = 0; j < cards.length; j++) {
+            if (c.id === "all" || cards[j].getAttribute("data-cat") === c.id) count++;
+        }
+        html += '<button class="cat-chip' + (state.cat === c.id ? " active" : "") + '" data-cats="' + c.id + '" type="button">' + c.label + ' <span class="cnt">' + count + '</span></button>';
+    }
+    catChips.innerHTML = html;
+}
+
+catChips.addEventListener("click", function(e) {
+    var btn = e.target.closest("[data-cat]");
+    if (!btn) return;
+    state.cat = btn.getAttribute("data-cat");
+    buildChips();
+    refresh();
+});
