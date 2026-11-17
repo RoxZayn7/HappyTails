@@ -152,3 +152,17 @@ grid.addEventListener("click", function(e) {
 document.getElementById("mClose").addEventListener("click", closeModal);
 modalBack.addEventListener("click", function(e) { if (e.target === modalBack) closeModal(); });
 document.addEventListener("keydown", function(e) { if (e.key === "Escape") closeModal(); });
+
+(function() {
+    var field = document.getElementById('pawField');
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var colors = ['var(--teal)','var(--amber)','var(--coral)','var(--pink)'];
+    var N = reduced ? 8 : 16;
+    for (var i=0;i<N;i++){
+        var el = document.createElement('span');
+        el.classList = 'paw-float';
+        var size = 18 + Math.random() * 30;
+        el.innerHTML = '<svg width="' + size + '" height"' + size + '" viewBox="0 0 24 24" fill="currentColor"><path d="M12 13.2c2.9 0 5.8 2.3 5.8 4.9 0 1.6-1.2 2.7-2.9 2.7-1 0-1.8-.4-2.9-.4s-1.9.4-2.9.4c-1.7 0-2.9-1.1-2.9-2.7 0-2.6 2.9-4.9 5.8-4.9ZM6.2 8.6c1.1.3 1.7 1.7 1.3 3.1-.4 1.4-1.6 2.3-2.7 2-1.1-.3-1.7-1.7-1.3-3.1.4-1.4 1.6-2.3 2.7-2Zm11.6 0c1.1-.3 2.3.6 2.7 2 .4 1.4-.2 2.8-1.3 3.1-1.3-2.3-.6-2.7-2-.4-1.4.2-2.8 1.3-3.1ZM9.3 3.6c1.2.1 2 1.4 1.9 2.9-.1 1.5-1.1 2.6-2.3 2.5-1.2-.1-2-1.4-1.9-2.9.1-1.5 1.1-2.6 2.3-2.5Zm5.4 0c1.2-.1 2.2 1 2.3 2.5.1 1.5-.7 2.8-1.9 2 .9-1.2.1-2.2-1-2.3-2.5-.1-1.5.7-2.8 1.9-2.9Z"/></svg>';
+        el.style.left = (Math.random() * 96) + 'vw';
+    }
+})
